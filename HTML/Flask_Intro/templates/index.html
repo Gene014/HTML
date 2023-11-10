@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('{{ url_for('static', filename='pexels-felix-mittermeier-956999.jpg') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1px 0;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: rgba(119, 16, 16, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .offer-list,
+        .playlist-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .offer-list li {
+            margin-bottom: 10px;
+        }
+
+        .playlist-iframe {
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            height: 352px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome! Take a Look and Enjoy My Website!</h1>
+    </header>
+
+    
+    <nav>
+        <ul>        
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Sample Works</h1>
+
+        <ul class="offer-list">
+            <li><a href="/touppercase">Capitalize a Word</a></li>
+            <li><a href="/arearadius">Area of a Circle</a></li>
+            <li><a href="/areaoftriangle">Area of a Triangle</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="playlist-container">
+            <h1>Stream and Follow My Fave Playlist</h1>
+            <iframe class="playlist-iframe" src="https://open.spotify.com/embed/playlist/50LW1ub1BXNTE8W4coVROS?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
